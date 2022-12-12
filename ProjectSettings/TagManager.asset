@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - MusicVolume
+  - music
+  - Object
+  - HitBox
+  - Enermy
+  - MusicVolumeMainMenu
+  - Tree
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Objects
+  - Player
+  - Boss
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: MainChacter
+    uniqueID: 3736862333
+    locked: 0
+  - name: Bridge
+    uniqueID: 2275957337
+    locked: 0
+  - name: Lake
+    uniqueID: 758419351
+    locked: 0
+  - name: Object
+    uniqueID: 2118538779
+    locked: 0
+  - name: Enermy
+    uniqueID: 2081163887
+    locked: 0
+  - name: HealthMainCharacter
+    uniqueID: 2560115147
+    locked: 0
