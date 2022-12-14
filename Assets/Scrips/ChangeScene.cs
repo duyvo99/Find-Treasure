@@ -57,9 +57,9 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void ChangeSceneInGame()
+    public void ChangeCutScene1()
     {
-        SceneManager.LoadScene("SceneInGame");
+        SceneManager.LoadScene("CutScene");
 
 
 

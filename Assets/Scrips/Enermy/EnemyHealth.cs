@@ -67,7 +67,7 @@ public class EnemyHealth : MonoBehaviour
         ////new
         winPanel.SetActive(false);
         gameManager = GetComponent<GameManager>();
-        m_spawnTime = spawnTime;
+        //m_spawnTime = spawnTime;
         
 
 
@@ -136,7 +136,6 @@ public class EnemyHealth : MonoBehaviour
 
             ////Decrease health player when treasures are destroyed
             //PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().TakeDamagePlayer(maxDamage);
-
 
 
 

@@ -13156,6 +13156,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.02271092
       objectReference: {fileID: 0}
+    - target: {fileID: 4849208450733972472, guid: 019b88dbf9c4e514fa8da2357c48c5ac, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409460466269913326, guid: 019b88dbf9c4e514fa8da2357c48c5ac, type: 3}
       propertyPath: target
       value: 
@@ -13350,6 +13354,7 @@ MonoBehaviour:
   attackRadius: 1.2
   homePosition: {fileID: 0}
   anim: {fileID: 0}
+  enemyDamageAttack: 30
   player: {fileID: 0}
   objectVFXSecond: {fileID: 0}
   buffBossVFX: {fileID: 0}
@@ -21728,10 +21733,13 @@ MonoBehaviour:
   attackRange: 0.3
   enenyLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   bossLayer:
     serializedVersion: 2
     m_Bits: 256
+  bossLayerLV4:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &1447223646
 Rigidbody2D:
   serializedVersion: 4

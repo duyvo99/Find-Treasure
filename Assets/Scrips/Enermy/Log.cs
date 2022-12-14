@@ -28,6 +28,7 @@ public class Log : EnermyAI
     float enemyDamage = 30;
     float spawnTime = 2;
     float m_spawnTime;
+    public float enemyDamageAttack = 30;
 
 
 
@@ -139,24 +140,24 @@ public class Log : EnermyAI
 
 
 
-        if(EnemyHealth.FindObjectOfType<EnemyHealth>().currentHealth <= 190)
-        {
+        //if(EnemyHealth.FindObjectOfType<EnemyHealth>().currentHealth <= 190)
+        //{
 
-            if(objectVFXSecond)
-            {
-                //VFXBoss();
+        //    if(objectVFXSecond)
+        //    {
+        //        //VFXBoss();
 
-                buffBossVFX.SetActive(true);
+        //        buffBossVFX.SetActive(true);
 
-            }    
+        //    }    
             
 
-            moveSpeed = 3.5f;
+        //    moveSpeed = 3.5f;
 
 
 
-            //gameObject.transform.localScale();
-        }    
+        //    //gameObject.transform.localScale();
+        //}    
 
 
 
@@ -338,7 +339,7 @@ public class Log : EnermyAI
     {
         if(isCollider)
         {
-            PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().TakeDamagePlayer(30);
+            PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().TakeDamagePlayer(enemyDamageAttack);
         }    
     }    
 
