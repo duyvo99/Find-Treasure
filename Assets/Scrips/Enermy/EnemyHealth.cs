@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class EnemyHealth : MonoBehaviour
 {
     private bool IsTrigger = false;
@@ -42,8 +44,8 @@ public class EnemyHealth : MonoBehaviour
     bool isDeadth = false;
 
     GameManager gameManager;
-    //float spawnTime = 2;
-    float m_spawnTime = 2;
+    float spawnTime = 1;
+    float m_spawnTime = 1;
 
 
 
@@ -65,7 +67,7 @@ public class EnemyHealth : MonoBehaviour
         ////new
         winPanel.SetActive(false);
         gameManager = GetComponent<GameManager>();
-        //m_spawnTime = spawnTime;
+        m_spawnTime = spawnTime;
         
 
 
@@ -128,7 +130,7 @@ public class EnemyHealth : MonoBehaviour
             gameObject.SetActive(false);
 
 
-            
+
 
 
 
@@ -140,8 +142,11 @@ public class EnemyHealth : MonoBehaviour
 
 
 
+            ////CHANGE SCENE
+            //StartCoroutine(ChangeCutScene(1.5F));
+            SceneManager.LoadScene("CutScene2BuffBoss");
 
-
+             
 
 
         }
@@ -237,6 +242,21 @@ public class EnemyHealth : MonoBehaviour
         {
             isDeadth = true;
         }
+
+    }
+
+
+
+
+    ////CHANGE SCENE 
+    IEnumerator ChangeCutScene(float delay)
+    {
+
+        yield return new WaitForSeconds(delay);
+
+        SceneManager.LoadScene("CutScene2BuffBoss");
+
+
 
     }
 

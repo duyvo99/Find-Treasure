@@ -40,8 +40,6 @@ public class BuffChoices : Singleton<BuffChoices>
 
 
 
-
-
     public override void Awake()
     {
         MakeSingleton(false);
