@@ -9,6 +9,8 @@ public class GameGUIManager : Singleton<GameGUIManager>
 
     public Text scoreText;
 
+    public Text treasureText;
+
 
     public override void Awake()
     {
@@ -18,9 +20,11 @@ public class GameGUIManager : Singleton<GameGUIManager>
 
     public void UpdateScore(int score)
     {
-        if(scoreText)
+        if(scoreText && treasureText)
         {
             scoreText.text = score.ToString();
+
+            treasureText.text = score.ToString();
         }    
     }
 

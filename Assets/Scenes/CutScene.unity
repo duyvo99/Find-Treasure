@@ -874,7 +874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245392318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.462446, y: 6.2, z: -10}
+  m_LocalPosition: {x: 1.1775541, y: 6.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8260,7 +8260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253886161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.462446, y: 6.2, z: -10}
+  m_LocalPosition: {x: 1.1775541, y: 6.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1244814143}
@@ -8367,7 +8367,7 @@ SpriteRenderer:
   m_Size: {x: 0.8125, y: 1.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1265857055
@@ -15076,6 +15076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 667903908}
+  treasureText: {fileID: 0}
 --- !u!4 &1499955643
 Transform:
   m_ObjectHideFlags: 0
@@ -17930,7 +17931,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1947334253}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 2f9d26ca3ab04424d91ae5623c089067, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: a1269bbc26678a24c824946a267dfb9d, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -17942,6 +17943,14 @@ PlayableDirector:
     value: {fileID: 558313076}
   - key: {fileID: 8448039379825121314, guid: 2f9d26ca3ab04424d91ae5623c089067, type: 2}
     value: {fileID: 558313076}
+  - key: {fileID: 2249287987345221551, guid: 2f9d26ca3ab04424d91ae5623c089067, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1231729364754812127, guid: e0c803227cd7f124a9c4d64574713942, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3270184669446984165, guid: a1269bbc26678a24c824946a267dfb9d, type: 2}
+    value: {fileID: 558313076}
+  - key: {fileID: 2085256700437173223, guid: a1269bbc26678a24c824946a267dfb9d, type: 2}
+    value: {fileID: 1264276099}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1947334255

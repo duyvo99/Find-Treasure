@@ -146,8 +146,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -558104963
-  m_SortingLayer: 1
+  m_SortingLayerID: 2118538779
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1336440320741484319, guid: b8ff37f78d302864e8dffb0fba0dafc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,12 +201,12 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 8689873698326698142}
-  minScore: 0
-  maxScore: 0
+  minScore: 1
+  maxScore: 1
   pickUpDropCoins: {fileID: 4739387984401473019, guid: fa56163d18f97ab4f952fec6a63293e6, type: 3}
-  dropCount: 0
-  spread: 0
-  attackRate: 0
+  dropCount: 1
+  spread: 1
+  attackRate: 1
   objectVFX: {fileID: 2504214343621411470, guid: 3ed0d324122d7b24eaec75c55c74aafc, type: 3}
 --- !u!1 &8689873697490995537
 GameObject:
@@ -376,7 +376,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2118538779
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &8689873698072918742

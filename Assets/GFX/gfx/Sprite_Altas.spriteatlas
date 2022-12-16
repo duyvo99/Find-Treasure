@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 99658ff6ef7156343bc7ab81887fa920, type: 3}
-    totalSpriteSurfaceArea: 753970
+    totalSpriteSurfaceArea: 752645
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}

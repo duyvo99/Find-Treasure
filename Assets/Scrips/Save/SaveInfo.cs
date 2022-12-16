@@ -21,6 +21,7 @@ public class SaveInfo : MonoBehaviour
 
     public void SaveInfoSceneOn()
     {
+
         saveInfoPanel.SetActive(true);
 
         Time.timeScale = 0f;
@@ -33,6 +34,13 @@ public class SaveInfo : MonoBehaviour
 
         Time.timeScale = 1f;
     }
+
+    public void ExitGamePlay()
+    {
+        Application.Quit();
+
+        saveInfoPanel.SetActive(false);
+    }    
 
 
 }

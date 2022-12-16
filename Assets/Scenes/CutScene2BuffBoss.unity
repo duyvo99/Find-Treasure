@@ -2527,6 +2527,8 @@ PlayableDirector:
     value: {fileID: 1921203183}
   - key: {fileID: -1982476990236770708, guid: 2f9d26ca3ab04424d91ae5623c089067, type: 2}
     value: {fileID: 1921203183}
+  - key: {fileID: 2249287987345221551, guid: 2f9d26ca3ab04424d91ae5623c089067, type: 2}
+    value: {fileID: 1921203183}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &437585707
@@ -4504,6 +4506,9 @@ MonoBehaviour:
   bossLayer:
     serializedVersion: 2
     m_Bits: 256
+  bossLayerLV4:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &834459665
 Rigidbody2D:
   serializedVersion: 4
@@ -27803,6 +27808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2075853986}
+  treasureText: {fileID: 0}
 --- !u!4 &1864957533
 Transform:
   m_ObjectHideFlags: 0
