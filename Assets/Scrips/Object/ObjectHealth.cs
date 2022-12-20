@@ -129,8 +129,23 @@ public class ObjectHealth : MonoBehaviour
 
 
 
+                ////CAMERA SHAKE (RUNG MÀNG HÌNH)
+                CineController.Ins.ShakeTrigger();
+
+
+
+
                 ////CHANGE SCENE TO LV2
                 GameManager.Ins.DestroyTreasure();
+
+
+
+                
+                ////CREATE SOUND
+                SoundManagerScript.PlaySound("TreasureDestroySound");
+
+                
+
 
             }
 

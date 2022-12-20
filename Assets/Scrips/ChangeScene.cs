@@ -84,5 +84,13 @@ public class ChangeScene : MonoBehaviour
     }
 
 
-    
+
+    public void ChangeScenePlayingGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+
+
+
 }

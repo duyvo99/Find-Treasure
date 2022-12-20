@@ -74,6 +74,16 @@ public class CharacterController2D : Singleton<CharacterController2D>
     float TestmaxMana;
 
 
+
+    ////TIME TO CREATE SOUND
+    float timeSound = 0.5f;
+    float timeSpawnSound;
+
+
+
+
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -85,6 +95,17 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
 
     }
+
+
+
+
+
+    ////TIME TO CREATE SOUND
+    private void Start()
+    {
+        timeSpawnSound = 0;
+    }
+
 
 
 
@@ -124,10 +145,15 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
 
 
+                ////CREATE SOUND
+                SoundManagerScript.PlaySound("PlayerAttack");
+
+
+
 
                 ////NEW ATTACK
                 //////////////// 28/11 ////////////
-                if(lastMotionVector.x == -1 && lastMotionVector.y == 0)
+                if (lastMotionVector.x == -1 && lastMotionVector.y == 0)
                 {
                     AttackLeft();
                     AttackLeftBoss();
@@ -162,6 +188,8 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
                 ////DECREASE MANA
                 PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().TakeManaPlayer(3);
+
+
             }
         }    
 
@@ -179,7 +207,38 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
             animator.SetFloat("lastVertical", vertical);
 
+
         }
+
+
+
+
+        ////CREATE SOUND
+        timeSpawnSound -= Time.deltaTime;
+
+        //if (elapsed > regenDelay)
+        if (timeSpawnSound <= 0 && moving == true)
+        {
+            SoundManagerScript.PlaySound("PlayerWalking");
+            //StartCoroutine(IncreateMana());
+
+            if(moving == false && timeSpawnSound == 0)
+            {
+                SoundManagerScript.StopPlaySound();
+            }
+
+            timeSpawnSound = timeSound;
+        }
+        //else if(timeSpawnSound >= 0)
+        //{
+        //    ////CREATE SOUND
+        //    SoundManagerScript.StopPlaySound();
+        //}
+        //if (moving == true)
+        //{
+        //    ////CREATE SOUND
+        //    SoundManagerScript.PlaySound("PlayerWalking");
+        //}
 
 
 
