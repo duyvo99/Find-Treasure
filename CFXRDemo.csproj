@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{223DE6E4-8E08-AD09-BF4F-C90D3CB15C02}</ProjectGuid>
+    <ProjectGuid>{F03BCC74-3502-A5D0-F633-ABB13462F376}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>CFXRDemo</AssemblyName>
@@ -53,8 +53,11 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\Demo Assets\CFXR_Demo_Translate.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\Demo Assets\CFXR_Demo.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\Demo Assets\CFXR_Demo_Translate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\Demo Assets\CFXR_Demo_Rotate.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -673,7 +676,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{48ED50CC-CC8B-D3A0-FE41-E183317341AB}</Project>
+      <Project>{5A5E8E9E-617A-206D-6E88-3E87863801B1}</Project>
       <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>

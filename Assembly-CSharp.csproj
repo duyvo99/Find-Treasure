@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E5F9E591-7658-2BCC-A42A-B662C7A921BB}</ProjectGuid>
+    <ProjectGuid>{219293D6-21E7-4555-27A1-46A125DD7CA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,11 +66,13 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scrips\Sound\SoundManagerScript.cs" />
     <Compile Include="Assets\Scrips\Manager\GameGUIManager.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scrips\Player\PlayerHit.cs" />
+    <Compile Include="Assets\Scrips\ButtonAnimation\ButtonAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -80,8 +82,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Pink Man\PlayerCode2.cs" />
+    <Compile Include="Assets\Scrips\NPC\Sign2.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scrips\BuffChoice\BuffChoices.cs" />
+    <Compile Include="Assets\Scrips\BuffChoiceAndChangeScene\BuffChoices.cs" />
     <Compile Include="Assets\Scrips\Music\DontDestroyMusic.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
@@ -105,11 +108,14 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scrips\Player\CharacterController2D.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Scrips\BuffChoiceAndChangeScene\ChangeSceneLV1.cs" />
     <Compile Include="Assets\Scrips\Enermy\Log.cs" />
     <Compile Include="Assets\Scrips\LoginCode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scrips\BuffChoiceAndChangeScene\ChangSceneLV4.cs" />
     <Compile Include="Assets\Scripts_Thay\Register_Thay.cs" />
     <Compile Include="Assets\Scrips\SignUpCode.cs" />
+    <Compile Include="Assets\Scrips\NPC\Sign.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scrips\Item\PickUpItem.cs" />
     <Compile Include="Assets\Scripts_Thay\SignUpCode_Thay.cs" />
@@ -118,6 +124,7 @@
     <Compile Include="Assets\Scrips\Enermy\EnemtTakeDamage.cs" />
     <Compile Include="Assets\Scrips\Enermy\EnermyAI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scrips\Enermy\EnemyMoment.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scrips\Singleton.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
@@ -125,16 +132,21 @@
     <Compile Include="Assets\Scrips\Manager\GameManager.cs" />
     <Compile Include="Assets\Scrips\Object\HealthBar.cs" />
     <Compile Include="Assets\Scripts_Thay\SignIn_Thay.cs" />
+    <Compile Include="Assets\Scrips\Sound\SoundMangagerScripts3.cs" />
+    <Compile Include="Assets\Scrips\Enermy\EnemyHealthLV4.cs" />
+    <Compile Include="Assets\Scrips\Sound\SoundMangagerScripts2.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\Scrips\scaleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\Scrips\CameraShake\CineController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\Scrips\Player\InfoPlayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Scrips\Enermy\EnemyMoment.cs" />
+    <Compile Include="Assets\Scrips\Music\DontDestroyMusicLV4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -886,36 +898,36 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{4AB9EBD1-6550-F4A7-D944-11DE56309197}</Project>
+      <Project>{B80EB807-F0FF-2226-17E5-1A5CF1906908}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{17AA4343-793C-E5C2-5054-9DCBD6C84EF6}</Project>
+      <Project>{B7304C0B-783D-F560-9DEB-E289C624124A}</Project>
       <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="CFXREditor.csproj">
-      <Project>{611DC932-A538-B63E-E132-3FD0971113E6}</Project>
+      <Project>{D65D0C3F-8A37-637C-D6E6-1BDAD668526D}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{223DE6E4-8E08-AD09-BF4F-C90D3CB15C02}</Project>
+      <Project>{F03BCC74-3502-A5D0-F633-ABB13462F376}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{6AA6553E-538D-0DD2-B9E5-20283134DCCC}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{4AFE5627-006F-7E9F-3FAB-18A9897F7270}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
-      <Project>{DA8058EB-6238-F6C0-002E-C20FE6386688}</Project>
+      <Project>{45D82DE3-D9A4-115A-5172-305C4DAB59C4}</Project>
       <Name>CFXR.WelcomeScreen</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{48ED50CC-CC8B-D3A0-FE41-E183317341AB}</Project>
+      <Project>{5A5E8E9E-617A-206D-6E88-3E87863801B1}</Project>
       <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{90D50FA7-4753-808A-87AE-B16FEEB281E0}</Project>
-      <Name>NavMeshComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{9C33A818-773B-18B4-06EE-52509EFED8FA}</Project>
-      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
