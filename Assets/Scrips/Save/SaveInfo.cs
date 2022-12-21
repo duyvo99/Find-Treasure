@@ -40,6 +40,8 @@ public class SaveInfo : MonoBehaviour
         Application.Quit();
 
         saveInfoPanel.SetActive(false);
+
+        PlayerPrefs.DeleteAll();
     }    
 
 

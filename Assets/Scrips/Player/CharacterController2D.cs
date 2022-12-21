@@ -76,7 +76,7 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
 
     ////TIME TO CREATE SOUND
-    float timeSound = 0.5f;
+    float timeSound = 1.5f;
     float timeSpawnSound;
 
 
@@ -146,7 +146,7 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
 
                 ////CREATE SOUND
-                SoundManagerScript.PlaySound("PlayerAttack");
+                SoundMangagerScripts2.PlaySound("PlayerAttack");
 
 
 
@@ -222,18 +222,18 @@ public class CharacterController2D : Singleton<CharacterController2D>
             SoundManagerScript.PlaySound("PlayerWalking");
             //StartCoroutine(IncreateMana());
 
-            if(moving == false && timeSpawnSound == 0)
-            {
-                SoundManagerScript.StopPlaySound();
-            }
+            //if(moving == false && timeSpawnSound == 0)
+            //{
+            //    SoundManagerScript.StopPlaySound();
+            //}
 
             timeSpawnSound = timeSound;
         }
-        //else if(timeSpawnSound >= 0)
-        //{
-        //    ////CREATE SOUND
-        //    SoundManagerScript.StopPlaySound();
-        //}
+        else if (moving == false)
+        {
+            ////CREATE SOUND
+            SoundManagerScript.StopPlaySound();
+        }
         //if (moving == true)
         //{
         //    ////CREATE SOUND

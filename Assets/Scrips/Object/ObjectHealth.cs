@@ -140,9 +140,9 @@ public class ObjectHealth : MonoBehaviour
 
 
 
-                
+
                 ////CREATE SOUND
-                SoundManagerScript.PlaySound("TreasureDestroySound");
+                SoundMangagerScripts2.PlaySound("TreasureDestroySound");
 
                 
 

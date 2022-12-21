@@ -8,7 +8,7 @@ public class SoundVolumeMainMenu : MonoBehaviour
 {
     private AudioSource AudioSource;
 
-    private float MusicVolume = 1f;
+    private float MusicVolume = 0.5f;
 
     public Slider volumeSlider;
 
@@ -22,13 +22,14 @@ public class SoundVolumeMainMenu : MonoBehaviour
     private void Start()
     {
 
+        volumeSlider.value = 0.5f;
 
         ObjectMusic = GameObject.FindWithTag("MusicVolumeMainMenu");
         AudioSource = ObjectMusic.GetComponent<AudioSource>();
 
 
 
-        MusicVolume = PlayerPrefs.GetFloat("volume", 1);
+        MusicVolume = PlayerPrefs.GetFloat("volume", 0.5f);
 
         MusicVolume = volumeSlider.value;
 

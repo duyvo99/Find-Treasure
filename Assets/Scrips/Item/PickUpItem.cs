@@ -31,6 +31,13 @@ public class PickUpItem : MonoBehaviour
         if(distance < 0.1f)
         {
             Destroy(gameObject);
+
+
+
+            ////CREATE SOUND
+            SoundMangagerScripts2.PlaySound("CollectCoin");
+
+
         }    
     }
 }

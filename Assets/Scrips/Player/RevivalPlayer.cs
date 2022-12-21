@@ -47,5 +47,17 @@ public class RevivalPlayer : MonoBehaviour
 
         PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().currentManaPlayer = 200;
         //PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().maxManaPlayer = 200;
+
+
+
+
+        ////CREATE SOUND
+        BuffChoices.Ins.countDie = 1;
+
+        SoundMangagerScripts3.PlaySound("PlayerRevivel");
+
+
+
+
     }
 }

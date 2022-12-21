@@ -77,7 +77,7 @@ public class ChangeScene : MonoBehaviour
 
 
         ////TAT NHAC O SCENE MAIN MENU
-        SoundVolumeMainMenu.FindObjectOfType<SoundVolumeMainMenu>().volumeSlider.value = 0;
+        SoundVolumeMainMenu.FindObjectOfType<SoundVolumeMainMenu>().volumeSlider.value = 0.5f;
 
 
 

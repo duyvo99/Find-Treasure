@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+using System.Linq;
+
 
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
@@ -81,6 +83,7 @@ public class SignUpCode_Thay : MonoBehaviour
 
     public void CheckPassWord()
     {
+        string passWordTextField = passWord.text;
 
         var hasNum = new Regex(@"[0-9]+");
 
@@ -88,7 +91,7 @@ public class SignUpCode_Thay : MonoBehaviour
 
         var hasMinChars = new Regex(@".{8,15}");
 
-        if(hasNum.IsMatch(passWord.text) && hasSymbols.IsMatch(passWord.text) && hasMinChars.IsMatch(passWord.text))
+        if(hasNum.IsMatch(passWord.text) && hasSymbols.IsMatch(passWord.text) && hasMinChars.IsMatch(passWord.text) && passWordTextField.Any(char.IsLetter) && passWordTextField.Any(char.IsUpper))
         {
             passWordText.text = "Right Password";
         }

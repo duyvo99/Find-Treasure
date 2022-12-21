@@ -126,6 +126,18 @@ public class EnemyHealth : MonoBehaviour
 
 
 
+
+
+
+            ////CREATE SOUND
+            SoundMangagerScripts2.PlaySound("enemyDead");
+
+
+
+
+
+
+
             //Destroy(gameObject);
             gameObject.SetActive(false);
 

@@ -189,6 +189,13 @@ public class Log : EnermyAI
                 myRigidbody.MovePosition(temp);
 
 
+
+
+
+                ////KO BỊ ĐẨY ISKINEMATIC = FALSE////
+
+
+
               
                 ////ENEMY FIND PLAYER
                 //agent.SetDestination(target.position);
@@ -323,6 +330,7 @@ public class Log : EnermyAI
         if (collision.gameObject.CompareTag("Player"))
         {
             isCollider = true;
+
         }
     }
 
@@ -331,6 +339,7 @@ public class Log : EnermyAI
         if(collision.gameObject.CompareTag("Player"))
         {
             isCollider = false;
+
         }    
     }
 
