@@ -28,6 +28,8 @@ public class Register_Thay : Singleton<Register_Thay>
 
     public UserList userList = new UserList();
 
+    string fileWriter = "";
+
 
     [System.Serializable]
     public class User
@@ -53,16 +55,23 @@ public class Register_Thay : Singleton<Register_Thay>
     // Start is called before the first frame update
     void Start()
     {
+        /////
+        fileWriter = Path.Combine(Application.streamingAssetsPath, "test1.csv");
+
+
+
+
         ReadCSV();
     }
 
 
     void ReadCSV()
     {
-        TextReader tr = new StreamReader(Application.dataPath + "/test1.csv", true);
+        //TextReader tr = new StreamReader(Application.dataPath + "/test1.csv", true);
+        TextReader tr = new StreamReader(fileWriter, true);
         //TextReader tr = new StreamReader("C:/Unity/ProjectGameGreenAcademy(17_10_2022_/Assets/test1.csv", true);
 
- 
+
         string[] data = tr.ReadToEnd().Split(',', '\n');
 
         int tablesize;
@@ -91,7 +100,8 @@ public class Register_Thay : Singleton<Register_Thay>
 
     void WriteCSV()
     {
-        TextWriter tw = new StreamWriter(Application.dataPath + "/test1.csv", true);
+        //TextWriter tw = new StreamWriter(Application.dataPath + "D:/FindTreasure/Assets/StreamingAssets/test1.csv", true);
+        TextWriter tw = new StreamWriter(fileWriter, true);
         //TextWriter tw = new StreamWriter("C:/Unity/ProjectGameGreenAcademy(17_10_2022_/Assets/test1.csv", true);
 
         if (CheckUserExisted() == true && userList.users.Length != 0)

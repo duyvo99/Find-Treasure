@@ -48,6 +48,12 @@ public class EnemyHealthLV4 : MonoBehaviour
 
 
 
+    ////THIRD VFX BLOOD
+    public GameObject objectVFXThirdBlood;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -177,6 +183,12 @@ public class EnemyHealthLV4 : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+
+
+
+        ////THIRD VFX BLOOD
+        Instantiate(objectVFXThirdBlood, transform.position, Quaternion.identity);
+
     }
 
 

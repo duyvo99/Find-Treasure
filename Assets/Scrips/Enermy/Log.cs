@@ -51,6 +51,14 @@ public class Log : EnermyAI
 
 
 
+    //////ENEMY MOVING PLATFORM
+    //[SerializeField] private GameObject[] waypoints;
+    //private int currentWaypointIndex = 0;
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -129,12 +137,17 @@ public class Log : EnermyAI
         {
             //anim.SetTrigger("attack");
             anim.SetBool("Attack", true);
+
+            myRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         else if(Vector2.Distance(target.position, transform.position) > attackRadius)
         {
             //anim.ResetTrigger("attack");
             anim.SetBool("Attack", false);
+
+            myRigidbody.constraints = RigidbodyConstraints2D.None;
+
         }
 
 
@@ -189,9 +202,6 @@ public class Log : EnermyAI
                 myRigidbody.MovePosition(temp);
 
 
-
-
-
                 ////KO BỊ ĐẨY ISKINEMATIC = FALSE////
 
 
@@ -220,17 +230,26 @@ public class Log : EnermyAI
         {
             //anim.SetBool("wakeUp", false);
 
-
             if (currentState == EnermyState.idle || currentState == EnermyState.walk && currentState != EnermyState.stagger)
             {
-                ////QUAY LẠI ĐIỂM BAN ĐẦU
-                Vector3 temp2 = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
 
 
-                changeAnim(temp2 - transform.position);
+                Vector3 temp = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
 
 
-                myRigidbody.MovePosition(temp2);
+                changeAnim(temp - transform.position);
+
+                myRigidbody.MovePosition(temp);
+
+
+                ////KO BỊ ĐẨY ISKINEMATIC = FALSE////
+
+
+
+
+                ////ENEMY FIND PLAYER
+                //agent.SetDestination(target.position);
+
 
 
 
@@ -238,7 +257,28 @@ public class Log : EnermyAI
 
 
                 anim.SetBool("wakeUp", true);
+
             }
+
+
+            //if (currentState == EnermyState.idle || currentState == EnermyState.walk && currentState != EnermyState.stagger)
+            //{
+            //    ////QUAY LẠI ĐIỂM BAN ĐẦU
+            //    Vector3 temp2 = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
+
+
+            //    changeAnim(temp2 - transform.position);
+
+
+            //    myRigidbody.MovePosition(temp2);
+
+
+
+            //    ChangeState(EnermyState.walk);
+
+
+            //    anim.SetBool("wakeUp", true);
+            //}
 
 
 
@@ -250,6 +290,23 @@ public class Log : EnermyAI
         if (transform.position == homePosition.position)
         {
             anim.SetBool("wakeUp", false);
+
+
+
+
+            //////ENEMY MOVING PLATFORM
+            //if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < 0.1f)
+            //{
+            //    currentWaypointIndex++;
+
+            //    if(currentWaypointIndex >= waypoints.Length)
+            //    {
+            //        currentWaypointIndex = 0;
+            //    }    
+            //}
+
+            //transform.position = Vector2.MoveTowards(transform.position,
+            //    waypoints[currentWaypointIndex].transform.position, Time.deltaTime * 500f);
         }
 
 
@@ -348,6 +405,8 @@ public class Log : EnermyAI
     {
         if(isCollider)
         {
+            SoundMangagerScripts2.PlaySound("EnemyAttack");
+
             PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().TakeDamagePlayer(enemyDamageAttack);
         }    
     }    

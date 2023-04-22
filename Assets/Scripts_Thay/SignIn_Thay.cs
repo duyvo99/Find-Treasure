@@ -26,6 +26,12 @@ public class SignIn_Thay : MonoBehaviour
     public UserList userList = new UserList();
 
 
+
+    string fileWriter = "";
+
+
+
+
     [System.Serializable]
     public class User
     {
@@ -47,13 +53,19 @@ public class SignIn_Thay : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+
+        //////
+        fileWriter = Path.Combine(Application.streamingAssetsPath, "test1.csv");
+
+
         ReadCSV();
     }
 
 
     void ReadCSV()
     {
-        TextReader tr = new StreamReader(Application.dataPath + "/test1.csv", true);
+        //TextReader tr = new StreamReader(Application.dataPath + "D:/FindTreasure/Assets/StreamingAssets/test1.csv", true);
+        TextReader tr = new StreamReader(fileWriter, true);
         //TextReader tr = new StreamReader("C:/Unity/ProjectGameGreenAcademy(17_10_2022_/Assets/test1.csv", true);
 
 
@@ -135,7 +147,7 @@ public class SignIn_Thay : MonoBehaviour
 
         if(isPass == true && isAccount == true)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("SceneGame");
         }
 
         else

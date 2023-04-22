@@ -26,9 +26,14 @@ public class LightChangeCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sceneLight.intensity = lightNumber;
+
+        //sceneLight.intensity = lightNumber;
+        sceneLight.intensity = slider.value;
+
 
         PlayerPrefs.SetFloat("light", lightNumber);
+
+        
 
     }
 

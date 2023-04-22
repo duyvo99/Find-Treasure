@@ -13,6 +13,8 @@ public class ChangeScene : MonoBehaviour
 
     public InputField passWord;
 
+    public GameObject settingMusicPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +56,7 @@ public class ChangeScene : MonoBehaviour
 
     public void ChangeSceneMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void ChangeCutScene1()
@@ -72,22 +74,34 @@ public class ChangeScene : MonoBehaviour
 
     public void ChangeSceneSettingVolume()
     {
-        SceneManager.LoadScene("SceneSettingVolume");
-
+        //SceneManager.LoadScene("SceneSettingVolume");
+        settingMusicPanel.SetActive(true);
 
 
         ////TAT NHAC O SCENE MAIN MENU
-        SoundVolumeMainMenu.FindObjectOfType<SoundVolumeMainMenu>().volumeSlider.value = 0.5f;
+        SoundVolumeMainMenu.FindObjectOfType<SoundVolumeMainMenu>().volumeSlider.value = 0f;
 
 
 
+    }
+
+    public void ChangeSceneSettingVolumeReal()
+    {
+        SceneManager.LoadScene("SceneSettingVolume");
     }
 
 
 
     public void ChangeScenePlayingGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("SceneGame");
+    }
+
+
+    public void ChangeSceneInPlayingGame()
+    {
+        //SceneManager.LoadScene("SceneInGame");
+        settingMusicPanel.SetActive(false);
     }
 
 

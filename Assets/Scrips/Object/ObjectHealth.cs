@@ -24,9 +24,9 @@ public class ObjectHealth : MonoBehaviour
     public int maxScore;
 
 
-    int minDamage = 10;
+    public int minDamage = 10;
 
-    int maxDamage = 30;
+    public int maxDamage = 30;
 
 
 

@@ -53,7 +53,7 @@ public class GameManager : Singleton<GameManager>
 
 
 
-
+        PlayerPrefs.DeleteAll();
     }
 
 
@@ -64,7 +64,8 @@ public class GameManager : Singleton<GameManager>
     {
         if(numberOfTreasure <= 0)
         {
-            BuffChoices.Ins.buffChoices.SetActive(true);
+            //BuffChoices.Ins.buffChoices.SetActive(true);
+            winPanel.SetActive(true);
 
 
             //Time.timeScale = 0f;

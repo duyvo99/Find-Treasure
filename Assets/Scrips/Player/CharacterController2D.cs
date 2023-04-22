@@ -53,6 +53,8 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
     public LayerMask bossLayer;
 
+    public LayerMask bossLayerLV2;
+
     public LayerMask bossLayerLV4;
 
 
@@ -78,6 +80,8 @@ public class CharacterController2D : Singleton<CharacterController2D>
     ////TIME TO CREATE SOUND
     float timeSound = 1.5f;
     float timeSpawnSound;
+
+
 
 
 
@@ -157,24 +161,28 @@ public class CharacterController2D : Singleton<CharacterController2D>
                 {
                     AttackLeft();
                     AttackLeftBoss();
+                    AttackLeftBossLV2();
                     AttackLeftBossLV4();
                 }
                 else if(lastMotionVector.x == 1 && lastMotionVector.y == 0)
                 {
                     AttackRight();
                     AttackRightBoss();
+                    AttackRightBossLV2();
                     AttackRightBossLV4();
                 }
                 else if (lastMotionVector.x == 0 && lastMotionVector.y == -1)
                 {
                     AttackDown();
                     AttackDownBoss();
+                    AttackDownBossLV2();
                     AttackDownBossLV4();
                 }
                 else if (lastMotionVector.x == 0 && lastMotionVector.y == 1)
                 {
                     AttackUp();
                     AttackUpBoss();
+                    AttackUpBossLV2();
                     AttackUpBossLV4();
 
                 }
@@ -187,7 +195,7 @@ public class CharacterController2D : Singleton<CharacterController2D>
 
 
                 ////DECREASE MANA
-                PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().TakeManaPlayer(3);
+                PlayerTakeDamage.FindObjectOfType<PlayerTakeDamage>().TakeManaPlayer(5);
 
 
             }
@@ -312,6 +320,21 @@ public class CharacterController2D : Singleton<CharacterController2D>
             enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter / 2);
         }
     }
+    void AttackLeftBossLV2()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointBoss.position, attackRange, bossLayerLV2);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            //enemy.GetComponent<ObjectHealth>().TakeDamage(damageMainCharacter);
+
+
+
+            ////ADD NEW (24/11)
+            //enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter);
+            enemy.GetComponent<EnemyHealthLV2>().TakeDamage(damageMainCharacter / 2);
+        }
+    }
     void AttackLeftBossLV4()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointBoss.position, attackRange, bossLayerLV4);
@@ -358,6 +381,21 @@ public class CharacterController2D : Singleton<CharacterController2D>
             ////ADD NEW (24/11)
             //enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter);
             enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter / 2);
+        }
+    }
+    void AttackRightBossLV2()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointBossRight.position, attackRange, bossLayerLV2);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            //enemy.GetComponent<ObjectHealth>().TakeDamage(damageMainCharacter);
+
+
+
+            ////ADD NEW (24/11)
+            //enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter);
+            enemy.GetComponent<EnemyHealthLV2>().TakeDamage(damageMainCharacter / 2);
         }
     }
     void AttackRightBossLV4()
@@ -407,6 +445,21 @@ public class CharacterController2D : Singleton<CharacterController2D>
             enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter / 2);
         }
     }
+    void AttackDownBossLV2()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointBossDown.position, attackRange, bossLayerLV2);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            //enemy.GetComponent<ObjectHealth>().TakeDamage(damageMainCharacter);
+
+
+
+            ////ADD NEW (24/11)
+            //enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter);
+            enemy.GetComponent<EnemyHealthLV2>().TakeDamage(damageMainCharacter / 2);
+        }
+    }
     void AttackDownBossLV4()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointBossDown.position, attackRange, bossLayerLV4);
@@ -451,6 +504,21 @@ public class CharacterController2D : Singleton<CharacterController2D>
             ////ADD NEW (24/11)
             //enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter);
             enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter / 2);
+        }
+    }
+    void AttackUpBossLV2()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointBossUp.position, attackRange, bossLayerLV2);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            //enemy.GetComponent<ObjectHealth>().TakeDamage(damageMainCharacter);
+
+
+
+            ////ADD NEW (24/11)
+            //enemy.GetComponent<EnemyHealth>().TakeDamage(damageMainCharacter);
+            enemy.GetComponent<EnemyHealthLV2>().TakeDamage(damageMainCharacter / 2);
         }
     }
     void AttackUpBossLV4()

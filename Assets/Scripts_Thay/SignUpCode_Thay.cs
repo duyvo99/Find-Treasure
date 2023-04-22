@@ -24,10 +24,13 @@ public class SignUpCode_Thay : MonoBehaviour
 
 
     public Text userNameText;
+    bool checkUserName = false;
 
     public Text passWordText;
+    bool checkPassWork = false;
 
     public Text phoneNumberText;
+    bool checkPhoneNumber = false;
 
 
     public Button createButton;
@@ -35,15 +38,21 @@ public class SignUpCode_Thay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        checkUserName = false;
+        checkPassWork = false;
+        checkPhoneNumber = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(userNameText.text == "Right User" && phoneNumberText.text == "Right Phone Number" && passWordText.text == "Right Password")
+        //if(userNameText.text == "Right User" && phoneNumberText.text == "Right Phone Number" && passWordText.text == "Right Password")
+        if (checkPassWork && checkPhoneNumber && checkUserName)
         {
             createButton.interactable = true;
+
+            Debug.Log("123000");
         }
 
         else
@@ -58,11 +67,13 @@ public class SignUpCode_Thay : MonoBehaviour
         if(userName.text.Length > 8)
         {
             userNameText.text = "Right User";
+            checkUserName = true;
         }
 
         else
         {
             userNameText.text = "Wrong User";
+            checkUserName = false;
         }
     }
 
@@ -72,11 +83,13 @@ public class SignUpCode_Thay : MonoBehaviour
         if (phoneNumber.text.Length == 10)
         {
             phoneNumberText.text = "Right Phone Number";
+            checkPhoneNumber = true;
         }
 
         else
         {
             phoneNumberText.text = "Wrong Phone Number";
+            checkPhoneNumber = false;
         }
     }
 
@@ -94,11 +107,13 @@ public class SignUpCode_Thay : MonoBehaviour
         if(hasNum.IsMatch(passWord.text) && hasSymbols.IsMatch(passWord.text) && hasMinChars.IsMatch(passWord.text) && passWordTextField.Any(char.IsLetter) && passWordTextField.Any(char.IsUpper))
         {
             passWordText.text = "Right Password";
+            checkPassWork = true;
         }
 
         else
         {
             passWordText.text = "Wrong Password";
+            checkPassWork = false;
         }
 
     }

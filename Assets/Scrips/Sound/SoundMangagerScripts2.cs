@@ -9,7 +9,10 @@ public class SoundMangagerScripts2 : MonoBehaviour
     public static AudioClip treasureDestroySound;
     public static AudioClip collectCoin;
     public static AudioClip enemyDead;
-    
+    public static AudioClip addHealthSound;
+    public static AudioClip addManaSound;
+    public static AudioClip enemyAttackSound;
+
 
     static AudioSource audioSrc;
 
@@ -21,7 +24,9 @@ public class SoundMangagerScripts2 : MonoBehaviour
         treasureDestroySound = Resources.Load<AudioClip>("TreasureDestroySound");
         collectCoin = Resources.Load<AudioClip>("CollectCoin");
         enemyDead = Resources.Load<AudioClip>("EnemyDead");
-
+        addHealthSound = Resources.Load<AudioClip>("AddHealth");
+        addManaSound = Resources.Load<AudioClip>("AddMana");
+        enemyAttackSound = Resources.Load<AudioClip>("EnemyAttack");
 
 
         audioSrc = GetComponent<AudioSource>();
@@ -45,13 +50,26 @@ public class SoundMangagerScripts2 : MonoBehaviour
             case "TreasureDestroySound":
                 audioSrc.PlayOneShot(treasureDestroySound);
                 break;
+
             case "CollectCoin":
                 audioSrc.PlayOneShot(collectCoin);
                 break;
+
             case "EnemyDead":
                 audioSrc.PlayOneShot(enemyDead);
                 break;
 
+            case "AddHealth":
+                audioSrc.PlayOneShot(addHealthSound);
+                break;
+
+            case "AddMana":
+                audioSrc.PlayOneShot(addManaSound);
+                break;
+
+            case "EnemyAttack":
+                audioSrc.PlayOneShot(enemyAttackSound);
+                break;
         }
     }
 

@@ -44,6 +44,31 @@ public class PlayerTakeDamage : MonoBehaviour
 
 
 
+
+    ////ADD HEALTH AND MANA
+    //HEALTH
+    public GameObject addHealth;
+    float countNumberHealth = 1;
+    //VFX FOR HEALTH
+    public GameObject vfxHealth;
+
+    //MANA
+    public GameObject addMana;
+    float countNumberMana = 1;
+    //VFX FOR MANA
+    public GameObject vfxMana;
+
+
+
+    ////VFX BLOOD
+    public GameObject vfxBloodPlayer;
+
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +89,20 @@ public class PlayerTakeDamage : MonoBehaviour
 
         ////THU NGHIEM (22/11)
         m_spawnTime = 0;
+
+
+
+
+
+
+        ////ADD HEALTH AND MANA
+        addHealth.SetActive(true);
+        addMana.SetActive(true);
+
+
+
+
+
 
     }
 
@@ -117,7 +156,7 @@ public class PlayerTakeDamage : MonoBehaviour
         m_spawnTime -= Time.deltaTime;
 
         //if (elapsed > regenDelay)
-        if(m_spawnTime <= 0 && currentHealthPlayer < maxManaPlayer)
+        if(m_spawnTime <= 0 && currentManaPlayer < maxManaPlayer)
         {
             currentManaPlayer = Mathf.Min(currentManaPlayer + regenRateMana, maxManaPlayer);
             //StartCoroutine(IncreateMana());
@@ -129,8 +168,60 @@ public class PlayerTakeDamage : MonoBehaviour
 
         else
         {
-            spawnTime = 2;
+            spawnTime = 0.5f;
         }
+
+
+
+
+
+        ////ADD HEALTH AND MANA
+        //HEALTH
+        if(Input.GetKeyDown(KeyCode.Keypad1) && countNumberHealth > 0 && addHealth)
+        {
+            currentHealthPlayer = currentHealthPlayer + 20;
+
+
+            ////ADD HEALTH SOUND
+            SoundMangagerScripts2.PlaySound("AddHealth");
+
+
+            Instantiate(vfxHealth, gameObject.transform.position, Quaternion.identity);
+
+            countNumberHealth--;
+
+            addHealth.SetActive(false);
+
+            if(currentHealthPlayer >= maxHealthPlayer)
+            {
+                currentHealthPlayer = maxHealthPlayer;
+            }    
+        }    
+
+        else if(Input.GetKeyDown(KeyCode.Keypad2) && countNumberMana > 0 && addMana)
+        {
+            currentManaPlayer = currentManaPlayer + 20;
+
+
+            ////ADD MANA SOUND
+            SoundMangagerScripts2.PlaySound("AddMana");
+
+
+            Instantiate(vfxMana, gameObject.transform.position, Quaternion.identity);
+
+            countNumberMana--;
+
+            addMana.SetActive(false);
+
+            if(currentManaPlayer >= maxManaPlayer)
+            {
+                currentManaPlayer = maxManaPlayer;
+            }    
+        }    
+
+
+
+
 
 
     }
@@ -142,6 +233,12 @@ public class PlayerTakeDamage : MonoBehaviour
         currentHealthPlayer -= damagePlayer;
 
         healthBarPlayer.SetHealth(currentHealthPlayer);
+
+
+
+        ////VFX BLOOD PLAYER
+        Instantiate(vfxBloodPlayer, transform.position, Quaternion.identity);
+
     }
 
 
